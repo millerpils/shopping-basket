@@ -8,11 +8,14 @@ let cards = []
 
 const ClothingGallery = (props) => {
 
-  console.log(props.clothesData)
+  console.log(props.displayItems)
 
   for (let i = 0; i < props.clothesData.tshirts.length; i++) {
     cards.push(
-      <ClothingCard key={i} card={props.clothesData.tshirts[i]} />
+      <ClothingCard 
+        key={i} 
+        card={props.clothesData.tshirts[i]} 
+      />
     )
   }
 

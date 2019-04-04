@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Header from './components/header'
 import ClothingNav from './components/nav-clothing'
-import ClothingGallery from './components/gallery'
+import CardList from './components/card-list'
 import clothesData from './components/json/clothes.data.json'
 import Footer from './components/footer'
 
@@ -11,7 +11,8 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      clothesData: clothesData
+      clothesData: clothesData,
+      displayItems: "tshirts"
     }
   }
 
@@ -20,14 +21,15 @@ class App extends Component {
       <div className="App">
         <Header />
         <div className="wrapper">
-          <div className="grid-container">
-            <div className="clothing-nav">
+          <main>
+            <div className="grid-container">
               <ClothingNav />
+              <CardList 
+                clothesData={this.state.clothesData} 
+                displayItems={this.state.displayItems}
+              /> 
             </div>
-            <main>
-              <ClothingGallery clothesData={this.state.clothesData} /> 
-            </main>
-          </div>
+          </main>
         </div>
         <Footer />
       </div>
