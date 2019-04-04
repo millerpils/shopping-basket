@@ -2,6 +2,10 @@ body {
   color: gray;
 }
 
+.wrapper {
+  margin: 2rem;
+}
+
 header {
   padding: 2rem 0;
   text-align: center;
@@ -10,13 +14,10 @@ header {
   grid-area: header;
 }
 
-.App {
+.grid-container {
   display: grid;
-  grid-template-areas:
-  'header header header header header header'
-  'menu main main main main main'
-  'footer footer footer footer footer footer';
-  grid-gap: 2rem;
+  grid-template-areas: 'menu main main main main main';
+  grid-gap: 1rem;
 }
 
 a {
@@ -36,6 +37,15 @@ main {
   grid-template-columns: auto auto auto auto auto;
 }
 
+.card {
+  text-align: center;
+}
+
+.card__photo img{
+  max-width: 15rem;
+}
+
+
 footer {
   grid-area: footer;
   background: grey;
@@ -44,7 +54,8 @@ footer {
 }
 
 ul {
-  margin-top: 0;
+  margin: 1.5rem 0 0 0;
+  padding: 0;
 }
 
 ul li {

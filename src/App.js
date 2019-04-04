@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import Header from './components/header'
-import ClothingNav from './components/clothing-nav'
-import ClothingGallery from './components/clothing-gallery'
+import ClothingNav from './components/nav-clothing'
+import ClothingGallery from './components/gallery'
 import clothesData from './components/json/clothes.data.json'
 import Footer from './components/footer'
 
@@ -19,10 +19,16 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-        <ClothingNav />
-        <main>
-          <ClothingGallery clothesData={this.state.clothesData} /> 
-        </main>
+        <div className="wrapper">
+          <div className="grid-container">
+            <div className="clothing-nav">
+              <ClothingNav />
+            </div>
+            <main>
+              <ClothingGallery clothesData={this.state.clothesData} /> 
+            </main>
+          </div>
+        </div>
         <Footer />
       </div>
     );

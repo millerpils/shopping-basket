@@ -1,42 +1,86 @@
-[
-  {
-    "id": 707860,
-    "brand": "H&M",
-    "name": "T-Shirt",
-    "photo": "handmtshirt.jpg",
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "gray"
-    ],
-    "sizes": [
-      "S",
-      "M",
-      "L",
-      "XL"
-    ],
-    "price": 14,
-    "currency": "GBP"
-  },
-  {
-    "id": 432423,
-    "brand": "Topman",
-    "name": "Jumper",
-    "photo": "topmanjumper.jpg",
-    "colors": [
-      "red",
-      "blue",
-      "green",
-      "gray"
-    ],
-    "sizes": [
-      "S",
-      "M",
-      "L",
-      "XL"
-    ],
-    "price": 21,
-    "currency": "GBP"
-  }
-]
+{
+  "tshirts" : [
+    {
+      "id": 707860,
+      "brand": "H&M",
+      "name": "T-Shirt",
+      "photo": "tshirt.jpg",
+      "colors": [
+        "red",
+        "blue",
+        "green",
+        "gray"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "price": 14,
+      "currency": "GBP"
+    },
+    {
+      "id": 43455,
+      "brand": "Topman",
+      "name": "The Tee Shirt",
+      "photo": "tshirt.jpg",
+      "colors": [
+        "red",
+        "blue",
+        "green",
+        "gray"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "price": 14,
+      "currency": "GBP"
+    }
+  ],
+  "jumpers" : [
+    {
+      "id": 653655,
+      "brand": "H&M",
+      "name": "The J Jumper",
+      "photo": "jumper.jpg",
+      "colors": [
+        "red",
+        "blue",
+        "green",
+        "gray"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "price": 24,
+      "currency": "GBP"
+    },
+    {
+      "id": 43455,
+      "brand": "Topman",
+      "name": "Une Jupe",
+      "photo": "jumper.jpg",
+      "colors": [
+        "red",
+        "blue",
+        "green",
+        "gray"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "price": 23,
+      "currency": "GBP"
+    }
+  ]
+}
