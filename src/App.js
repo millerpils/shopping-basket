@@ -1,25 +1,29 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/header'
+import ClothingNav from './components/clothing-nav'
+import ClothingGallery from './components/clothing-gallery'
+import clothesData from './components/json/clothes.data.json'
+import Footer from './components/footer'
 
 class App extends Component {
-  render() {
+
+  constructor() {
+    super()
+    this.state = {
+      clothesData: clothesData
+    }
+  }
+
+  render = () => {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <Header />
+        <ClothingNav />
+        <main>
+          <ClothingGallery clothesData={this.state.clothesData} /> 
+        </main>
+        <Footer />
       </div>
     );
   }

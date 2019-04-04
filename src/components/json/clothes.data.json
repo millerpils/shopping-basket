@@ -1,0 +1,42 @@
+[
+  {
+    "id": 707860,
+    "brand": "H&M",
+    "name": "T-Shirt",
+    "photo": "handmtshirt.jpg",
+    "colors": [
+      "red",
+      "blue",
+      "green",
+      "gray"
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "price": 14,
+    "currency": "GBP"
+  },
+  {
+    "id": 432423,
+    "brand": "Topman",
+    "name": "Jumper",
+    "photo": "topmanjumper.jpg",
+    "colors": [
+      "red",
+      "blue",
+      "green",
+      "gray"
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "price": 21,
+    "currency": "GBP"
+  }
+]
