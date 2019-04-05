@@ -10,7 +10,7 @@ const ClothingNav = () => {
     <div className="grid-container">
       <ul>
         <li>
-          <a href="/t-Shirts">T-Shirts</a>
+          <a href="/tshirts">T-Shirts</a>
         </li>
         <li>
           <a href="/jumpers">Jumpers</a>

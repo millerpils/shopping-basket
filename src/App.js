@@ -3,19 +3,9 @@ import './App.css';
 import Header from './components/header'
 import ClothingNav from './components/nav-clothing'
 import CardList from './components/card-list'
-import clothesData from './components/json/clothes.data.json'
 import Footer from './components/footer'
 
 class App extends Component {
-
-  constructor() {
-    super()
-    this.state = {
-      clothesData: clothesData,
-      displayItems: "tshirts"
-    }
-  }
-
   render = () => {
     return (
       <div className="App">
@@ -24,16 +14,13 @@ class App extends Component {
           <main>
             <div className="grid-container">
               <ClothingNav />
-              <CardList 
-                clothesData={this.state.clothesData} 
-                displayItems={this.state.displayItems}
-              /> 
+              <CardList displayItems="all" /> 
             </div>
           </main>
         </div>
         <Footer />
       </div>
-    );
+    )
   }
 }
 

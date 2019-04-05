@@ -1,29 +1,41 @@
 /****
-  props = clothesData - all card data
+  props = displayItems
 ***/
 
-import React from 'react'
+import React, { Component } from 'react'
 import ClothingCard from './card'
-let cards = []
+import clothesData from './json/clothes.data.json'
 
-const ClothingGallery = (props) => {
+class CardList extends Component {
 
-  console.log(props.displayItems)
-
-  for (let i = 0; i < props.clothesData.tshirts.length; i++) {
-    cards.push(
-      <ClothingCard 
-        key={i} 
-        card={props.clothesData.tshirts[i]} 
-      />
-    )
+  constructor(props) {
+    super(props)
+    this.state = {
+      clothesData: clothesData,
+      displayItems: "tshirts"
+    }
   }
 
-  return (
-    <div className="cards">
-      {cards}
-    </div>
-  )
+  getCards = () => {
+    let cards = []
+    for ( let i = 0; i < this.state.clothesData.tshirts.length; i++ ) {
+      cards.push(
+        <ClothingCard 
+          key={i} 
+          card={this.state.clothesData.tshirts[i]} 
+        />
+      )
+    }
+    return cards
+  }
+
+  render() {
+    return (
+      <div className="cards">
+        {this.getCards()}
+      </div>
+    )
+  }
 }
 
-export default ClothingGallery
+export default CardList
