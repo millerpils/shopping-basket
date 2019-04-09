@@ -1,10 +1,11 @@
 /****
   props.displayItems
+  this.props.match.params.item
 ***/
 
 import React, { Component } from 'react'
 import ClothingItem from './ClothingItem'
-import ClothingNav from './ClothingNav'
+import { Link } from 'react-router-dom'
 import clothesData from './json/clothes.data.json'
 
 class ClothingList extends Component {
@@ -24,34 +25,82 @@ class ClothingList extends Component {
         clothesData: clothesData,
         isLoaded: true,
         displayItems: this.props.displayitems
-      }, () => console.log(this.state.displayItems) )
+      })
     } else {
       this.setState({
         clothesData: clothesData,
         isLoaded: true,
-        displayItems: this.props.match.params
+        displayItems: this.props.match.params.item
       })
     }
+  }
+
+  getQuery = () => {
+    let queryJSON
+
+    /* 
+      in reality, a separate query would be made to an API
+      for all the tshirts, jumpers etc, then the loop would be more generic
+    */
+
+    if ( this.state.displayItems === 'tshirts') {
+      queryJSON = this.state.clothesData.tshirts
+    } else if ( this.state.displayItems === 'jumpers' ) {
+      queryJSON = this.state.clothesData.jumpers
+    }
+
+    return queryJSON
   }
 
   getCards = () => {
     let cards = []
 
-    for ( let i = 0; i < this.state.clothesData.tshirts.length; i++ ) {
+    let queryJSON = this.getQuery()
+
+    for ( let i = 0; i < queryJSON.length; i++ ) {
       cards.push(
         <ClothingItem 
           key={i} 
-          card={this.state.clothesData.tshirts[i]} 
+          card={queryJSON[i]} 
         />
       )
     }
     return cards
   }
 
+  getNav = () => {
+    return (
+      <ul>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/clothes/tshirts" displayitems="tshirts" onClick={this.handleNavClick}>T-Shirts</Link>
+        </li>
+        <li>
+          <Link to="/clothes/jumpers" displayitems="jumpers" onClick={this.handleNavClick}>Jumpers</Link>
+        </li>
+        <li>
+          <Link to="/clothes/trousers">Trousers</Link>
+        </li>
+        <li>
+          <Link to="/clothes/jackets">Jackets</Link>
+        </li>
+        <li>
+          <Link to="/clothes/suits">Suits</Link>
+        </li>
+      </ul> 
+    )
+  }
+
+  handleNavClick = (event) => {
+    console.log(event.target.getAttribute('displayitems'))
+  }
+  
   render() {
     return (
       <div className="grid-container">
-        <ClothingNav />
+        {this.getNav()}
         <div className="cards">
           {this.state.isLoaded && this.getCards()}
         </div>
