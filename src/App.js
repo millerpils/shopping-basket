@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './App.css';
-import Header from './components/header'
-import ClothingNav from './components/clothing-nav'
-import CardList from './components/card-list'
-import Footer from './components/footer'
+import Header from './components/Header'
+import ClothingList from './components/ClothingList'
+import Home from './components/Home'
+import Footer from './components/Footer'
 
 class App extends Component {
   render = () => {
@@ -14,16 +14,13 @@ class App extends Component {
           <Header />
           <div className="wrapper">
             <main>
-              <div className="grid-container">
-                <ClothingNav />
-                <CardList />
-              </div>
+              <Route exact path="/" component={Home} displayItems="tshirts" />
+              <Route path="/tshirts" component={ClothingList} displayItems="tshirts" />
+              <Route path="/jumpers" component={ClothingList} displayItems="jumpers" />
             </main>
           </div>
           <Footer />
         </div>
-        <Route path="/tshirts" component={CardList} displayItems="tshirts" />
-        <Route path="/jumpers" component={CardList} displayItems="tshirts" />
       </Router>
     )
   }

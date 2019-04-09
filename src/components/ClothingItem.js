@@ -1,10 +1,10 @@
 /****
-  props = card 
+  props.card 
 ***/
 
 import React from 'react'
 
-const ClothingCard = (props) => {
+const ClothingItem = (props) => {
   console.log(props)
 
   return (
@@ -17,4 +17,4 @@ const ClothingCard = (props) => {
   )
 }
 
-export default ClothingCard
+export default ClothingItem
