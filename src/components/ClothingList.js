@@ -14,19 +14,29 @@ class ClothingList extends Component {
     this.state = {
       clothesData: {},
       isLoaded: false,
-      displayItems: props.displayItems
+      displayItems: null
     }
   }
 
   componentDidMount() {
-    this.setState({
-      clothesData: clothesData,
-      isLoaded: true
-    })
+    if ( this.props.displayitems ) { 
+      this.setState({
+        clothesData: clothesData,
+        isLoaded: true,
+        displayItems: this.props.displayitems
+      }, () => console.log(this.state.displayItems) )
+    } else {
+      this.setState({
+        clothesData: clothesData,
+        isLoaded: true,
+        displayItems: this.props.match.params
+      })
+    }
   }
 
   getCards = () => {
     let cards = []
+
     for ( let i = 0; i < this.state.clothesData.tshirts.length; i++ ) {
       cards.push(
         <ClothingItem 

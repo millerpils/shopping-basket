@@ -5,8 +5,6 @@
 import React from 'react'
 
 const ClothingItem = (props) => {
-  console.log(props)
-
   return (
     <div className="card">
       <h3>{props.card.name} - {props.card.brand}</h3>

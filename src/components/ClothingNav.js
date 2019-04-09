@@ -10,19 +10,22 @@ const ClothingNav = () => {
   return (
     <ul>
       <li>
-        <Link to="/tshirts" displayitems="tshirts">T-Shirts</Link>
+        <Link to="/">Home</Link>
       </li>
       <li>
-        <Link to="/jumpers" displayitems="jumpers">Jumpers</Link>
+        <Link to="/clothes/tshirts">T-Shirts</Link>
       </li>
       <li>
-        <Link to="/trousers" displayitems="trousers">Jumpers</Link>
+        <Link to="/clothes/jumpers">Jumpers</Link>
       </li>
       <li>
-        <Link to="/jackets" displayitems="jackets">Jackets</Link>
+        <Link to="/clothes/trousers">Trousers</Link>
       </li>
       <li>
-        <Link to="/suits" displayitems="suits">Jumpers</Link>
+        <Link to="/clothes/jackets">Jackets</Link>
+      </li>
+      <li>
+        <Link to="/clothes/suits">Suits</Link>
       </li>
     </ul> 
   )

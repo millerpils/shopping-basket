@@ -14,9 +14,8 @@ class App extends Component {
           <Header />
           <div className="wrapper">
             <main>
-              <Route exact path="/" component={Home} displayItems="tshirts" />
-              <Route path="/tshirts" component={ClothingList} displayItems="tshirts" />
-              <Route path="/jumpers" component={ClothingList} displayItems="jumpers" />
+              <Route exact path="/" component={Home} />
+              <Route path="/clothes/:item" component={ClothingList} />
             </main>
           </div>
           <Footer />
