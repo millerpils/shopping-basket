@@ -78,7 +78,7 @@ class ClothingList extends Component {
 
   getNav = () => {
     return (
-      <ul className="clothes-nav">
+      <ul className="items-nav">
         <li>
           <Link to="/">Home</Link>
         </li>
@@ -147,7 +147,7 @@ class ClothingList extends Component {
           <div className="heading">
             <h2>{this.state.displayItems}</h2>
           </div>
-          <div className="cards">
+          <div className="items">
             {this.state.isLoaded && this.getCards()}
           </div>
         </div>

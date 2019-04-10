@@ -21,14 +21,12 @@ a {
   .heading h2 {
     color: #313837; }
 
-main {
-  margin-top: 2.5rem; }
-
 header {
   color: #313837; }
 
 .header__inner {
-  padding: 0 0 2rem 0;
+  padding: 2rem 0;
+  margin: 0 2rem;
   border-bottom: 1px solid #d1d3d3; }
 
 .header__cart {

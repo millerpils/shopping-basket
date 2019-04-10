@@ -1,0 +1,13 @@
+ul.items-nav {
+  margin: 1.5rem 0 0 0;
+  padding: 0;
+
+  li {
+    list-style: none;
+    margin-bottom: .5rem;
+  }
+}
+
+.items-nav {
+  grid-area: menu;
+}

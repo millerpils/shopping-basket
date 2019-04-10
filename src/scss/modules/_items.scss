@@ -1,0 +1,8 @@
+.items {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+}
+
+.items__item {
+  color: #313837;
+}
