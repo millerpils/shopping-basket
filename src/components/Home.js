@@ -3,9 +3,7 @@ import ClothingList from './ClothingList'
 
 const Home = () => {
   return(
-    <div className="grid-container">
-      <ClothingList displayitems="tshirts"/>
-    </div>
+    <ClothingList displayitems="tshirts"/>
   )
 }
 

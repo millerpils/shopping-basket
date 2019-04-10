@@ -82,5 +82,131 @@
       "price": 23,
       "currency": "GBP"
     }
+  ],
+  "trousers" : [
+    {
+      "id": 645645,
+      "brand": "Next",
+      "name": "The Trow Sir",
+      "photo": "trousers.jpg",
+      "colors": [
+        "red",
+        "blue",
+        "green",
+        "gray"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "price": 24,
+      "currency": "GBP"
+    },
+    {
+      "id": 54555,
+      "brand": "Topman",
+      "name": "Une Trow",
+      "photo": "trousers.jpg",
+      "colors": [
+        "red",
+        "blue",
+        "green",
+        "gray"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "price": 23,
+      "currency": "GBP"
+    }
+  ],
+  "jackets" : [
+    {
+      "id": 44344,
+      "brand": "Gap",
+      "name": "Gap Jacket",
+      "photo": "jacket.jpg",
+      "colors": [
+        "red",
+        "blue",
+        "green",
+        "gray"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "price": 24,
+      "currency": "GBP"
+    },
+    {
+      "id": 422542,
+      "brand": "Gap",
+      "name": "Their other jacket",
+      "photo": "jacket.jpg",
+      "colors": [
+        "red",
+        "blue",
+        "green",
+        "gray"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "price": 23,
+      "currency": "GBP"
+    }
+  ],
+  "suits" : [
+    {
+      "id": 44344,
+      "brand": "Moss Bros",
+      "name": "The Three Piece",
+      "photo": "suit.jpeg",
+      "colors": [
+        "red",
+        "blue",
+        "green",
+        "gray"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "price": 24,
+      "currency": "GBP"
+    },
+    {
+      "id": 422542,
+      "brand": "Gap",
+      "name": "The Two Piece",
+      "photo": "suit.jpeg",
+      "colors": [
+        "red",
+        "blue",
+        "green",
+        "gray"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "price": 23,
+      "currency": "GBP"
+    }
   ]
 }

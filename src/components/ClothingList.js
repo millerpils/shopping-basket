@@ -47,6 +47,14 @@ class ClothingList extends Component {
       queryJSON = this.state.clothesData.tshirts
     } else if ( this.state.displayItems === 'jumpers' ) {
       queryJSON = this.state.clothesData.jumpers
+    } else if ( this.state.displayItems === 'trousers' ) {
+      queryJSON = this.state.clothesData.trousers
+    } else if ( this.state.displayItems === 'jumpers' ) {
+      queryJSON = this.state.clothesData.jackets
+    } else if ( this.state.displayItems === 'jackets' ) {
+      queryJSON = this.state.clothesData.jackets
+    } else if ( this.state.displayItems === 'suits' ) {
+      queryJSON = this.state.clothesData.suits
     }
 
     return queryJSON
@@ -70,7 +78,7 @@ class ClothingList extends Component {
 
   getNav = () => {
     return (
-      <ul>
+      <ul className="clothes-nav">
         <li>
           <Link to="/">Home</Link>
         </li>
@@ -81,28 +89,37 @@ class ClothingList extends Component {
           <Link to="/clothes/jumpers" displayitems="jumpers" onClick={this.handleNavClick}>Jumpers</Link>
         </li>
         <li>
-          <Link to="/clothes/trousers">Trousers</Link>
+          <Link to="/clothes/trousers" displayitems="trousers" onClick={this.handleNavClick}>Trousers</Link>
         </li>
         <li>
-          <Link to="/clothes/jackets">Jackets</Link>
+          <Link to="/clothes/jackets" displayitems="jackets" onClick={this.handleNavClick}>Jackets</Link>
         </li>
         <li>
-          <Link to="/clothes/suits">Suits</Link>
+          <Link to="/clothes/suits" displayitems="suits" onClick={this.handleNavClick}>Suits</Link>
         </li>
       </ul> 
     )
   }
 
   handleNavClick = (event) => {
-    console.log(event.target.getAttribute('displayitems'))
+    let displayItemsAttr = event.target.getAttribute('displayitems')
+
+    this.setState({
+      displayItems: displayItemsAttr
+    })
   }
   
   render() {
     return (
-      <div className="grid-container">
-        {this.getNav()}
-        <div className="cards">
-          {this.state.isLoaded && this.getCards()}
+      <div>
+        <div className="grid-container">
+          {this.getNav()}
+          <div className="heading">
+            <h2>{this.state.displayItems}</h2>
+          </div>
+          <div className="cards">
+            {this.state.isLoaded && this.getCards()}
+          </div>
         </div>
       </div>
     )

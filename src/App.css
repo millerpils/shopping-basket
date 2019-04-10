@@ -1,35 +1,59 @@
 body {
-  color: gray;
+
+}
+
+header {
+  color: #313837;
+}
+
+a {
+  color: #313837;
+}
+
+footer {
+  grid-area: footer;
+  background: #313837;
+  padding: 2rem;
+  color: white;
+}
+
+ul.clothes-nav {
+  margin: 1.5rem 0 0 0;
+  padding: 0;
+}
+
+ul.clothes-nav  li {
+  list-style: none;
+  margin-bottom: .5rem;
+}
+
+.header__inner {
+  padding: 2rem 0;
+  margin: 0 2rem;
+  border-bottom: 1px solid #d1d3d3;
 }
 
 .wrapper {
   margin: 2rem;
 }
 
-header {
-  padding: 2rem 0;
-  text-align: center;
-  background: grey;
-  color: white;
-  grid-area: header;
-}
-
 .grid-container {
   display: grid;
-  grid-template-areas: 'menu main main main main main';
+  grid-template-areas: 'menu heading heading heading heading heading'
+                       'menu main main main main main';
   grid-gap: 1rem;
 }
 
-a {
-  color: gray;
-}
-
-.clothing-nav {
+.clothes-nav {
   grid-area: menu;
 }
 
-main {
-  grid-area: main;
+.heading {
+  grid-area: heading;
+}
+
+.heading h2{
+  color: #909696;
 }
 
 .cards {
@@ -39,26 +63,12 @@ main {
 
 .card {
   text-align: center;
+  color: #909696;
 }
 
 .card__photo img{
-  max-width: 15rem;
+  max-width: 11rem;
 }
 
 
-footer {
-  grid-area: footer;
-  background: grey;
-  padding: 2rem;
-  color: white;
-}
 
-ul {
-  margin: 1.5rem 0 0 0;
-  padding: 0;
-}
-
-ul li {
-  list-style: none;
-  margin-bottom: .5rem;
-}
