@@ -6,7 +6,7 @@ import React from 'react'
 
 const ClothingItem = (props) => {
   return (
-    <div className="card">
+    <div className="cards__card">
       <h3>{props.card.name} - {props.card.brand}</h3>
       <div className="card__price">
         &pound;{props.card.price}

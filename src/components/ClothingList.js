@@ -83,19 +83,49 @@ class ClothingList extends Component {
           <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/clothes/tshirts" displayitems="tshirts" onClick={this.handleNavClick}>T-Shirts</Link>
+          <Link 
+            to="/clothes/tshirts" 
+            displayitems="tshirts" 
+            onClick={this.handleNavClick}
+          >
+            T-Shirts
+          </Link>
         </li>
         <li>
-          <Link to="/clothes/jumpers" displayitems="jumpers" onClick={this.handleNavClick}>Jumpers</Link>
+          <Link 
+            to="/clothes/jumpers" 
+            displayitems="jumpers" 
+            onClick={this.handleNavClick}
+          >
+            Jumpers
+          </Link>
         </li>
         <li>
-          <Link to="/clothes/trousers" displayitems="trousers" onClick={this.handleNavClick}>Trousers</Link>
+          <Link 
+            to="/clothes/trousers" 
+            displayitems="trousers" 
+            onClick={this.handleNavClick}
+          >
+            Trousers
+          </Link>
         </li>
         <li>
-          <Link to="/clothes/jackets" displayitems="jackets" onClick={this.handleNavClick}>Jackets</Link>
+          <Link 
+            to="/clothes/jackets" 
+            displayitems="jackets" 
+            onClick={this.handleNavClick}
+          >
+            Jackets
+          </Link>
         </li>
         <li>
-          <Link to="/clothes/suits" displayitems="suits" onClick={this.handleNavClick}>Suits</Link>
+          <Link 
+            to="/clothes/suits" 
+            displayitems="suits" 
+            onClick={this.handleNavClick}
+          >
+            Suits
+          </Link>
         </li>
       </ul> 
     )
