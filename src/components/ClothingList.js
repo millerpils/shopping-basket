@@ -38,23 +38,25 @@ class ClothingList extends Component {
   getQuery = () => {
     let queryJSON
 
-    /* 
-      in reality, a separate query would be made to an API
-      for all the tshirts, jumpers etc, then the loop would be more generic
-    */
-
-    if ( this.state.displayItems === 'tshirts') {
-      queryJSON = this.state.clothesData.tshirts
-    } else if ( this.state.displayItems === 'jumpers' ) {
-      queryJSON = this.state.clothesData.jumpers
-    } else if ( this.state.displayItems === 'trousers' ) {
-      queryJSON = this.state.clothesData.trousers
-    } else if ( this.state.displayItems === 'jumpers' ) {
-      queryJSON = this.state.clothesData.jackets
-    } else if ( this.state.displayItems === 'jackets' ) {
-      queryJSON = this.state.clothesData.jackets
-    } else if ( this.state.displayItems === 'suits' ) {
-      queryJSON = this.state.clothesData.suits
+    switch ( this.state.displayItems ) {
+      case 'tshirts':
+        queryJSON = this.state.clothesData.tshirts
+        break
+      case 'jumpers':
+        queryJSON = this.state.clothesData.jumpers
+        break
+      case 'trousers':
+        queryJSON = this.state.clothesData.trousers
+        break
+      case 'jackets':
+        queryJSON = this.state.clothesData.jackets
+        break
+      case 'suits':
+        queryJSON = this.state.clothesData.suits
+        break
+      default: 
+        queryJSON = this.state.clothesData.tshirts
+        break
     }
 
     return queryJSON
@@ -69,19 +71,19 @@ class ClothingList extends Component {
       cards.push(
         <ClothingItem 
           key={i} 
-          card={queryJSON[i]} 
+          item={queryJSON[i]} 
         />
       )
     }
     return cards
   }
 
+  /* add this to its own component and use a callback
+    function to handle the click */
+    
   getNav = () => {
     return (
       <ul className="items-nav">
-        <li>
-          <Link to="/">Home</Link>
-        </li>
         <li>
           <Link 
             to="/clothes/tshirts" 

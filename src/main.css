@@ -14,7 +14,8 @@ a {
 .grid-container {
   display: grid;
   grid-template-areas: 'menu heading heading heading heading heading' 'menu main main main main main';
-  grid-gap: 0 1rem; }
+  grid-gap: 0 1rem;
+  grid-template-columns: 12rem 1fr; }
 
 .heading {
   grid-area: heading; }
@@ -70,7 +71,7 @@ ul.items-nav {
   padding: 0; }
   ul.items-nav li {
     list-style: none;
-    margin-bottom: .5rem; }
+    margin-bottom: 1rem; }
 
 .items-nav {
   grid-area: menu; }

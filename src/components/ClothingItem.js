@@ -7,15 +7,15 @@ import React from 'react'
 const ClothingItem = (props) => {
   return (
     <div className="items__item">
-      <h3>{props.card.name} - {props.card.brand}</h3>
+      <h3>{props.item.name} - {props.item.brand}</h3>
       <div className="item__price">
-        &pound;{props.card.price}
+        &pound;{props.item.price}
       </div>
       <div className="item__photo">
-        <img src={process.env.PUBLIC_URL + '/product-imgs/' + props.card.photo} alt="" />
+        <img src={process.env.PUBLIC_URL + '/product-imgs/' + props.item.photo} alt="" />
       </div>
       <div className="item__buttons">
-        <button type="submit">Buy</button>
+        <button>Add to cart</button>
       </div>
     </div>
   )
