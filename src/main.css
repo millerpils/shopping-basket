@@ -26,14 +26,32 @@ main {
   margin-top: 2.5rem; }
 
 header {
-  color: #313837; }
+  color: #323938; }
+
+.header__branding,
+.header__inner,
+.header__cart {
+  padding: 1rem 0; }
 
 .header__inner {
   padding: 0 0 2rem 0;
-  border-bottom: 1px solid #d1d3d3; }
+  border-bottom: 1px solid #d1d3d3;
+  display: grid;
+  grid-template-columns: 10rem auto 5rem; }
 
 .header__cart {
-  float: right; }
+  float: right;
+  text-align: right; }
+
+nav ul {
+  text-align: right;
+  margin-right: 15rem; }
+  nav ul li {
+    list-style: none;
+    display: inline;
+    margin-right: 3rem; }
+    nav ul li:last-child {
+      margin-right: 0; }
 
 footer {
   grid-area: footer;

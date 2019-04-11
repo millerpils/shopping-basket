@@ -1,0 +1,16 @@
+nav {
+  ul {
+    text-align: right;
+    margin-right: 15rem;
+
+    li {
+      list-style: none;
+      display: inline;
+      margin-right: 3rem;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

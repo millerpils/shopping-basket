@@ -1,12 +1,21 @@
 header {
-  color: #313837;
+  color: hsl(171, 7%, 21%);
+}
+
+.header__branding,
+.header__inner,
+.header__cart {
+  padding: 1rem 0;
 }
 
 .header__inner {
   padding: 0 0 2rem 0;
   border-bottom: 1px solid #d1d3d3;
+  display: grid;
+  grid-template-columns: 10rem auto 5rem;
 }
 
 .header__cart {
   float: right;
+  text-align: right;
 }

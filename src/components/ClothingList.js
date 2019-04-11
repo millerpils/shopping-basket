@@ -5,7 +5,7 @@
 
 import React, { Component } from 'react'
 import ClothingItem from './ClothingItem'
-import { Link } from 'react-router-dom'
+import ClothingNav from './ClothingNav'
 import clothesData from './json/clothes.data.json'
 
 class ClothingList extends Component {
@@ -78,61 +78,6 @@ class ClothingList extends Component {
     return cards
   }
 
-  /* add this to its own component and use a callback
-    function to handle the click */
-    
-  getNav = () => {
-    return (
-      <ul className="items-nav">
-        <li>
-          <Link 
-            to="/clothes/tshirts" 
-            displayitems="tshirts" 
-            onClick={this.handleNavClick}
-          >
-            T-Shirts
-          </Link>
-        </li>
-        <li>
-          <Link 
-            to="/clothes/jumpers" 
-            displayitems="jumpers" 
-            onClick={this.handleNavClick}
-          >
-            Jumpers
-          </Link>
-        </li>
-        <li>
-          <Link 
-            to="/clothes/trousers" 
-            displayitems="trousers" 
-            onClick={this.handleNavClick}
-          >
-            Trousers
-          </Link>
-        </li>
-        <li>
-          <Link 
-            to="/clothes/jackets" 
-            displayitems="jackets" 
-            onClick={this.handleNavClick}
-          >
-            Jackets
-          </Link>
-        </li>
-        <li>
-          <Link 
-            to="/clothes/suits" 
-            displayitems="suits" 
-            onClick={this.handleNavClick}
-          >
-            Suits
-          </Link>
-        </li>
-      </ul> 
-    )
-  }
-
   handleNavClick = (event) => {
     let displayItemsAttr = event.target.getAttribute('displayitems')
 
@@ -145,7 +90,7 @@ class ClothingList extends Component {
     return (
       <div>
         <div className="grid-container">
-          {this.getNav()}
+          <ClothingNav handleNavClick={this.handleNavClick} />
           <div className="heading">
             <h2>{this.state.displayItems}</h2>
           </div>
