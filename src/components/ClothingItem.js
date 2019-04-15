@@ -1,10 +1,10 @@
 /****
-  props.card 
+  props.item = all the info about an item
 ***/
 
 import React from 'react'
 
-const ClothingItem = (props) => {
+const ClothingItem = props => {
   return (
     <div className="items__item">
       <h3>{props.item.name} - {props.item.brand}</h3>

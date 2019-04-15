@@ -1,9 +1,9 @@
 import React from 'react'
 import ClothingList from './ClothingList'
 
-const Home = () => {
+const Home = (props) => {
   return(
-    <ClothingList displayitems="tshirts"/>
+    <ClothingList displayItems="tshirts" clothesData={props.clothesData} />
   )
 }
 

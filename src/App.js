@@ -6,8 +6,18 @@ import Header from './components/Header'
 import ClothingList from './components/ClothingList'
 import Home from './components/Home'
 import Footer from './components/Footer'
+import Cart from './components/Cart'
+import clothesData from './components/json/clothes.data.json'
 
 class App extends Component {
+
+  componentDidMount() {
+    this.setState({
+      clothesData: clothesData,
+      cart: null
+    })
+  }
+
   render = () => {
     return (
       <Router>
@@ -15,8 +25,17 @@ class App extends Component {
           <div className="wrapper"> 
             <Header />
             <main>
-              <Route exact path="/" component={Home} />
-              <Route path="/clothes/:item" component={ClothingList} />
+              <Route exact path="/" 
+                render={() => <Home clothesData={clothesData} />}
+              />
+              <Route 
+                path="/clothes/:item" 
+                render={props => <ClothingList {...props} clothesData={clothesData} />}
+              />
+              <Route 
+                path="/cart" 
+                component={Cart} 
+              />
             </main>
           </div>
           <Footer />

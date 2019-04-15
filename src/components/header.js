@@ -9,8 +9,10 @@ const Header = () => {
           D&amp;M Clothing  
         </div>
         <Nav />
-        <div className="header__cart">
-          <i className="fas fa-shopping-cart"></i>
+        <div>
+          <div className="header__cart">
+            <i className="fas fa-shopping-cart"></i>
+          </div>
         </div>
       </div>
     </header>
